@@ -6,7 +6,7 @@ from surApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView.as_view(), name='home'),
+    path('home/', HomeView.as_view(), name='home'),
     path('show_votings/<int:user_id>/', VotingListByUserAPIView.as_view(), name='voting-list-by-user'),
     path('create/voting/', VotingCreateAPIView.as_view(), name='voting-create'),
     path('update/voting/<int:pk>/', VotingUpdateAPIView.as_view(), name='voting-update'),
